@@ -1,0 +1,25 @@
+$font-size-large: 24px;
+
+$light-font-color: #1a252f;
+$light-primary-color: #eaeaea;
+$light-secondary-color: #3498db;
+
+$dark-font-color: #e6e6e6;
+$dark-primary-color: #3c3c3c;
+$dark-secondary-color: #b5b5b5;
+
+:root {
+  --font-size-large: #{$font-size-large};
+}
+
+[data-theme='dark'] {
+  --primary-color: #{$dark-primary-color};
+  --secondary-color: #{$dark-secondary-color};
+  --font-color: #{$dark-font-color};
+}
+
+[data-theme='light'] {
+  --primary-color: #{$light-primary-color};
+  --secondary-color: #{$light-secondary-color};
+  --font-color: #{$light-font-color};
+}

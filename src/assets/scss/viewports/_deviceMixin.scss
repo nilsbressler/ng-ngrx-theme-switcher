@@ -1,0 +1,43 @@
+@import 'deviceConfig';
+
+@mixin onlyMobile {
+  @media (max-width: $mobileMaxWidth) {
+    @content;
+  }
+}
+
+@mixin onlyTablet {
+  @media (min-width: $tabletMinWidth) and (max-width: $tabletMaxWidth) {
+    @content;
+  }
+}
+
+@mixin onlySmallDesktop {
+  @media (min-width: $smallDesktopMinWidth) and (max-width: $smallDesktopMaxWidth) {
+    @content;
+  }
+}
+
+@mixin onlyLargeDesktop {
+  @media (min-width: $largeDesktopMinWidth) {
+    @content;
+  }
+}
+
+@mixin customViewport($minWidth, $maxWidth) {
+  @media (min-width: $minWidth) and (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin customMinWidth($minWidth) {
+  @media only screen and (min-width: $minWidth) {
+    @content;
+  }
+}
+
+@mixin customMaxWidth($maxWidth) {
+  @media only screen and (max-width: $maxWidth) {
+    @content;
+  }
+}

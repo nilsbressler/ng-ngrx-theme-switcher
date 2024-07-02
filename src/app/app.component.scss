@@ -1,0 +1,32 @@
+@import 'scss/viewports/deviceMixin';
+@import 'scss/theme/theme';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background-color: var(--primary-color);
+}
+
+::ng-deep .mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: var(--primary-color);
+
+  @include customMaxWidth(700px) {
+    flex-direction: column;
+  }
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  padding: 1rem;
+}

@@ -1,0 +1,18 @@
+@import 'scss/viewports/deviceMixin';
+@import 'scss/theme/theme';
+
+.blog-post-wrapper {
+  padding: 0.5rem;
+
+  h2 {
+    color: var(--font-color);
+  }
+
+  .blog-post {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--font-color);
+  }
+}
